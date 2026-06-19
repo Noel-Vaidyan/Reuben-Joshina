@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<script>
+if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Reuben & Joshina — Wedding</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
@@ -655,6 +658,11 @@ footer::before{
 <audio id="weddingAudio" src="music.mp3" loop autoplay></audio>
 
 <script>
+window.scrollTo(0, 0);
+if (window.location.hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+
 /* Countdown */
 function updateCountdown(){
   const target = new Date('2026-08-17T10:30:00+05:30');
